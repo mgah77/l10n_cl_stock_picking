@@ -1059,7 +1059,7 @@ msgid "n/a"
 msgstr "n/a"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.invoice
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.invoice
 msgid "not invoiced pickings"
 msgstr "guías de despacho sin facturar"
 
