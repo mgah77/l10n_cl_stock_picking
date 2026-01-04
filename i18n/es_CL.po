@@ -33,117 +33,117 @@ msgstr ""
 "* El estado 'Cancelada' se usa cuando el usuario cancela la factura."
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "\"El acuse de recibo que se declara en este acto, de acuerdo a lo dispuesto en la letra b) del Artículo 4°, y la letra c) del Artículo 5° de la Ley 19.983, acredita que la entrega de mercaderías o servicio(s) prestado(s) ha(n) sido recibido(s)\""
 msgstr "\"El acuse de recibo que se declara en este acto, de acuerdo a lo dispuesto en la letra b) del Artículo 4°, y la letra c) del Artículo 5° de la Ley 19.983, acredita que la entrega de mercaderías o servicio(s) prestado(s) ha(n) sido recibido(s)\""
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
 msgid "- Next Number:"
 msgstr "- Próximo Número:"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<span> Documento de Referencia</span>"
 msgstr "<span> Documento de Referencia</span>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Ciudad:</strong>"
 msgstr "<strong>Ciudad:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Comuna:</strong>"
 msgstr "<strong>Comuna:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Condición de Pago:</strong>"
 msgstr "<strong>Condición de Pago:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Contacto:</strong>"
 msgstr "<strong>Contacto:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Descuento</strong>"
 msgstr "<strong>Descuento</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Domicilio:</strong>"
 msgstr "<strong>Domicilio:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>FECHA:</strong>"
 msgstr "<strong>FECHA:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>FIRMA:</strong>"
 msgstr "<strong>FIRMA:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Fecha:</strong>"
 msgstr "<strong>Fecha:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Folio:</strong>"
 msgstr "<strong>Folio:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Giro:</strong>"
 msgstr "<strong>Giro:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Nombre:</strong>"
 msgstr "<strong>Nombre:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>R.U.T.:</strong>"
 msgstr "<strong>R.U.T.:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>RECINTO:</strong>"
 msgstr "<strong>RECINTO:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>RUT:</strong>"
 msgstr "<strong>RUT:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Reference:</strong>"
 msgstr "<strong>Referencia:</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Señor (es):</strong>"
 msgstr "<strong>Señor (es):</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Subtotal</strong>"
 msgstr "<strong>Subtotal</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Total</strong>"
 msgstr "<strong>Total</strong>"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "<strong>Vencimiento:</strong>"
 msgstr "<strong>Vencimiento:</strong>"
 
@@ -182,8 +182,8 @@ msgid "Archivo Repetido"
 msgstr "Archivo Repetido"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
 msgid "Ask for DTE"
 msgstr "Consultar estado Guía de Despacho"
 
@@ -203,17 +203,17 @@ msgid "Borrador"
 msgstr "Borrador"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "CEDIBLE CON SU FACTURA"
 msgstr "CEDIBLE CON SU FACTURA"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Cantidad"
 msgstr "Cantidad"
 
@@ -223,7 +223,7 @@ msgid "Chofer"
 msgstr "Chofer"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Ciudad"
 msgstr "Ciudad"
 
@@ -238,7 +238,7 @@ msgid "Company id"
 msgstr "Id Compañia"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
 msgid "Confirm"
 msgstr "Confimar"
 
@@ -285,17 +285,17 @@ msgid "Código de Sucursal SII"
 msgstr "Código de Sucursal SII"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
 msgid "DTes a enviar"
 msgstr "DTes a enviar"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Desc.(%)"
 msgstr "Desc.(%)"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Descripción"
 msgstr "Descripción"
 
@@ -325,7 +325,7 @@ msgid "Detalle"
 msgstr "Detalle"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Dirección de Envío"
 msgstr "Dirección de Envío"
 
@@ -358,18 +358,18 @@ msgid "Documento"
 msgstr "Documento"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
 msgid "Download XML"
 msgstr "Descargar XML de envío"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "E-Mail:"
 msgstr "E-Mail:"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
 msgid "Electronic Document"
 msgstr "Guía de Despacho Electrónica"
 
@@ -404,7 +404,7 @@ msgid "Envio Rechazado - Otros"
 msgstr "Envio Rechazado - Otros"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
 msgid "Envio SII"
 msgstr "Envio SII"
 
@@ -554,7 +554,7 @@ msgstr "Move ids"
 
 #. module: l10n_cl_stock_picking
 #: model:ir.model.fields,field_description:l10n_cl_stock_picking.field_sii_dte_stock_picking_masive_send_wizard_documentos
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
 msgid "Movimientos"
 msgstr "Movimientos"
 
@@ -592,7 +592,7 @@ msgstr "No se puede emitir una guía sin líneas"
 
 #. module: l10n_cl_stock_picking
 #: model:ir.model.fields,field_description:l10n_cl_stock_picking.field_stock_pack_operation_name
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Nombre"
 msgstr "Nombre"
 
@@ -648,7 +648,7 @@ msgstr "Parcial"
 
 #. module: l10n_cl_stock_picking
 #: model:ir.model.fields,field_description:l10n_cl_stock_picking.field_stock_picking_patente
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Patente"
 msgstr "Patente"
 
@@ -669,12 +669,12 @@ msgid "Please, set your company responsability in the company partner before con
 msgstr "Please, set your company responsability in the company partner before continue."
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Precio"
 msgstr "Precio"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Precio Unitario"
 msgstr "Precio Unitario"
 
@@ -707,12 +707,12 @@ msgid "Quants"
 msgstr "Quants"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "R.U.T.:"
 msgstr "R.U.T.:"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "RUT"
 msgstr "RUT"
 
@@ -763,7 +763,7 @@ msgid "Resultado"
 msgstr "Resultado"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "SII -"
 msgstr "SII -"
 
@@ -792,7 +792,7 @@ msgid "SII Barcode Name"
 msgstr "SII Barcode Name"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
 msgid "SII DTE masive send Wizard"
 msgstr "SII DTE masive send Wizard"
 
@@ -866,8 +866,8 @@ msgid "Send File Name"
 msgstr "Nombre archivo de envío"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_stock_picking_form
 msgid "Send XML"
 msgstr "Enviar Guía de Despacho al SII"
 
@@ -896,7 +896,7 @@ msgid "Taxes"
 msgstr "Impuestos"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Teléfono:"
 msgstr "Teléfono:"
 
@@ -937,7 +937,7 @@ msgid "This field contains the information related to the numbering         of t
 msgstr "This field contains the information related to the numbering         of the documents entries of this document type."
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid ""
 "Timbre Electrónico SII\n"
 "                             <br/>\n"
@@ -974,7 +974,7 @@ msgid "Transfer"
 msgstr "Transferir"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.dte_stock_picking
 msgid "Traslado"
 msgstr "Traslado"
 
@@ -999,7 +999,7 @@ msgid "Use Documents?"
 msgstr "¿Usa Documentos Tributarios?"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.view_electronic_book_guias_form
 msgid "Validate"
 msgstr "Validar"
 
@@ -1032,7 +1032,7 @@ msgid "You cannot delete a Validated book."
 msgstr "You cannot delete a Validated book."
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.invoice
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.invoice
 msgid "You have"
 msgstr "Tiene"
 
@@ -1049,7 +1049,7 @@ msgid "Your company has not setted any responsability"
 msgstr "Your company has not setted any responsability"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.invoice
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.invoice
 msgid "for this customer. You can allocate them to add as reference on Other Info."
 msgstr "para este cliente. Puede agregarlos como referencias en la pestaña Otra Información."
 
@@ -1064,7 +1064,7 @@ msgid "not invoiced pickings"
 msgstr "guías de despacho sin facturar"
 
 #. module: l10n_cl_stock_picking
-#: model:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_cl_stock_picking.sii_dte_masive_send_wizard_form
 msgid "or"
 msgstr "o"
 
