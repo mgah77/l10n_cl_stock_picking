@@ -69,7 +69,6 @@
 
     <menuitem action="action_move_books" id="menu_action_move_books_form"
             parent="stock.menu_stock_warehouse_mgmt"
-            groups="stock.group_stock_manager"
             sequence="3"/>
     </data>
 </odoo>
