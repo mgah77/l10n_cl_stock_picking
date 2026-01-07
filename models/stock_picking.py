@@ -349,7 +349,7 @@ class StockPicking(models.Model):
             states={'done': [('readonly', True)]},
         )
     chofer = fields.Many2one(
-            'res.partner',
+            'res.users',
             string="Chofer",
             readonly=False,
             states={'done': [('readonly', True)]},
