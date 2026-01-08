@@ -188,7 +188,7 @@
                        </tr>
                    </thead>
                    <tbody class="invoice_tbody">
-                       <tr t-foreach="o.move_ids.sorted(key=lambda m: m.product_id.id)" t-as="l">
+                       <tr style="font-size: 9px !important;" t-foreach="o.move_ids.sorted(key=lambda m: m.product_id.id)" t-as="l">
                            <td class="table-cell-no-padding">
                                <span t-field="l.quantity_done"/>
                                <span t-field="l.product_uom"  groups="product.group_uom"/>
