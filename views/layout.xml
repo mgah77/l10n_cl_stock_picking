@@ -207,8 +207,8 @@
                            <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line" style="padding:4px !important;">
                                <span t-field="l.discount"/>
                            </td>
-                           <td class="text-right" t-if="'subtotal' in l" style="padding:4px !important;">
-                               <span t-field="l.subtotal"
+                           <td class="text-right" t-if="'price_untaxed' in l" style="padding:4px !important;">
+                               <span t-field="l.price_untaxed"
                                    t-options="{'widget': 'monetary', 'display_currency': o.currency_id, 'digits': 0}"/>
                            </td>
                        </tr>
