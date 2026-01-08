@@ -37,7 +37,7 @@
                               <!-- domicilios -->
                               <br/>
                                 <t t-if="company.id == 1">
-                                    <t t-if="o.location_id.id == 24">
+                                    <t t-if="company.id == 1">
                                         <span>Dirección: PAR VIAL 2704, Puerto Montt</span><br/>
                                         <span>Telefono: 65 231 3101</span><br/>  
                                         <span>Email: ventas.parvial@insumar.cl</span><br/>                         
