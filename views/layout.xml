@@ -37,15 +37,17 @@
                               <!-- domicilios -->
                               <br/>
                                 <t t-if="company.id == 1">
-                                    <t t-if="company.id == 1">
+                                <t t-if="o.picking_type_id.warehouse_id.id == 2">
+                                        <span>Dirección: Ñuble 190, Puerto Montt</span><br/>
+                                        <span>Telefono: 65 271 5386</span><br/>
+                                        <span>Email: ventas@insumar.cl</span><br/>                         
+                                    </t>
+
+                                    <!-- Para cualquier otra bodega (o la bodega Par Vial) -->
+                                    <t t-else="">
                                         <span>Dirección: PAR VIAL 2704, Puerto Montt</span><br/>
                                         <span>Telefono: 65 231 3101</span><br/>  
                                         <span>Email: ventas.parvial@insumar.cl</span><br/>                         
-                                    </t>
-                                    <t t-if="o.location_id.id == 18">
-                                        <span>Dirección: Ñuble 190, Puerto Montt</span><br/>
-                                        <span>Telefono: 65 271 5386</span><br/>
-                                        <span>Email: ventas@insumar.cl</span><br/>  
                                     </t>  
                                 </t>  
                               <t t-if="company.id != 1">
@@ -81,13 +83,13 @@
                         SII - <span t-field="company.sii_regional_office_id.name"/>
                     </p>
                 </div>
-                <t t-if="o.origin">
+                <!--t t-if="o.origin">
                     <div class="row" style="text-align: center !important;" name="div_origin">
                         <div class="col-12" style="text-align: center; color: black; font-size: 12px; margin-top: 4px;">
                             Documento de Origen: <t t-esc="o.origin"/>
                         </div>
                     </div>
-                </t>
+                </t!-->
               </div>
             </div>
             <div class="row" style="display:none !important;">
