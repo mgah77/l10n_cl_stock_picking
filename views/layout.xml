@@ -179,7 +179,7 @@
                 <div class="row table-container" name="detalles" style="min-height: 543px; max-height: 543px;">
                   <table class="table table-condensed">
                    <thead>
-                       <tr class="table-row-small" style="padding:0px;">
+                       <tr style="font-size: 11px !important; min-height: 14px; padding: 2px 0;">
                           <th>Cantidad</th>
                           <th>Descripción</th>
                           <th class="text-right">Precio Unitario</th>
@@ -187,13 +187,13 @@
                           <th class="text-right">Precio</th>
                        </tr>
                    </thead>
-                   <tbody class="invoice_tbody" style="font-size: 9px; !important">
+                   <tbody class="invoice_tbody">
                        <tr t-foreach="o.move_ids.sorted(key=lambda m: m.product_id.id)" t-as="l">
-                           <td style="padding:4px !important;">
+                           <td class="table-cell-no-padding">
                                <span t-field="l.quantity_done"/>
                                <span t-field="l.product_uom"  groups="product.group_uom"/>
                            </td>
-                           <td>
+                           <tdclass="table-cell-no-padding">
                               <t t-if="l.description_picking != l.product_id.name and l.description_picking != l.product_id.display_name">
                                   <span t-field="l.description_picking"/>
                               </t>
@@ -202,13 +202,13 @@
                               </t>
                            </td>
 
-                           <td class="text-right" style="padding:4px !important;">
+                           <td class="table-cell-no-padding">
                                <span t-field="l.precio_unitario" t-options="{'widget': 'monetary', 'display_currency': o.currency_id, 'digits': 0}"/>
                            </td>
-                           <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line" style="padding:4px !important;">
+                           <td t-if="display_discount" class="table-cell-no-padding" groups="sale.group_discount_per_so_line">
                                <span t-field="l.discount"/>
                            </td>
-                           <td class="text-right" t-if="'price_untaxed' in l" style="padding:4px !important;">
+                           <td class="table-cell-no-padding" t-if="'price_untaxed' in l">
                                <span t-field="l.price_untaxed"
                                    t-options="{'widget': 'monetary', 'display_currency': o.currency_id, 'digits': 0}"/>
                            </td>
