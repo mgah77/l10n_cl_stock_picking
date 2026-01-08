@@ -253,7 +253,7 @@
                         </tbody>
                </table>
 			 </div>
-               <div class="row">
+               <div class="row" style="padding-top:40px;" >
                  <div class="col-5">
                    <div class="col-12">
                       <img t-if="o.sii_barcode_img" t-att-src="image_data_uri(o.sii_barcode_img)" />
