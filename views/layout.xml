@@ -217,7 +217,7 @@
                </table>
              </div>
              </div>
-             <div class="row" style="border:1px solid black; height:70px; padding-top:40px;" >
+             <div class="row" style="border:1px solid black; height:70px; padding-top:80px;" >
                <table class="table table-condensed" style="height:30px;">
                        <thead>
                          <tr style="max-height:10px; font-size:10px !important;">
@@ -253,7 +253,7 @@
                         </tbody>
                </table>
 			 </div>
-               <div class="row" style="padding-top:40px;" >
+               <div class="row" style="padding-top:80px;" >
                  <div class="col-5">
                    <div class="col-12">
                       <img t-if="o.sii_barcode_img" t-att-src="image_data_uri(o.sii_barcode_img)" />
