@@ -217,7 +217,7 @@
                </table>
              </div>
              </div>
-             <div class="row" style="border:1px solid black; height:70px;" >
+             <div class="row" style="border:1px solid black; height:70px; padding-top:40px;" >
                <table class="table table-condensed" style="height:30px;">
                        <thead>
                          <tr style="max-height:10px; font-size:10px !important;">
