@@ -96,7 +96,7 @@
               <div name="company_address"/>
             </div>
           </div>
-          <div class="page" style="padding-top:55px;">
+          <div class="page" style="padding-top:45px;">
               <div class="row" style="border: 2px solid black;">
                   <table class="table cl_invoice">
                     <tbody style="font-size: 9px !important;">
@@ -226,7 +226,7 @@
                          </tr>
                        </thead>
                        <tbody>
-                         <tr style="max-height:9px; font-size:8px !important;">
+                         <tr style="max-height:9px; font-size:9px !important;">
                            <td><span t-field="o.chofer.name" /></td>
                            <td><span t-field="o.chofer.document_number"/></td>
                            <td   name="td_sched_date"><span t-field="o.patente"/></td>
