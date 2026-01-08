@@ -179,7 +179,7 @@
                 <div class="row table-container" name="detalles" style="min-height: 543px; max-height: 543px;">
                   <table class="table table-condensed">
                    <thead>
-                       <tr style="max-height:10px; font-size:10px !important;">
+                       <tr class="table-row-small" style="padding:0px;">
                           <th>Cantidad</th>
                           <th>Descripción</th>
                           <th class="text-right">Precio Unitario</th>
