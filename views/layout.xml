@@ -193,7 +193,7 @@
                                <span t-field="l.quantity_done"/>
                                <span t-field="l.product_uom"  groups="product.group_uom"/>
                            </td>
-                           <tdclass="table-cell-no-padding">
+                           <td class="table-cell-no-padding">
                               <t t-if="l.description_picking != l.product_id.name and l.description_picking != l.product_id.display_name">
                                   <span t-field="l.description_picking"/>
                               </t>
