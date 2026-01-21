@@ -131,7 +131,12 @@ class StockPicking(models.Model):
         return tax_grouped
 
     def set_use_document(self):
-        return (self.picking_type_id and self.picking_type_id.code != 'incoming')
+        if self.picking_type_id:
+            # Verificamos si el nombre de la ubicación de destino es 'Scrap'
+            if self.picking_type_id.default_location_dest_id.name == 'Scrap':
+                return False
+            return self.picking_type_id.code != 'incoming'
+        return False
 
     def get_xml_file(self):
         return {
@@ -379,7 +384,11 @@ class StockPicking(models.Model):
     @api.onchange('picking_type_id')
     def onchange_picking_type(self,):
         if self.picking_type_id:
-            self.use_documents = self.picking_type_id.code not in ["incoming"]
+            # Verificamos si el nombre de la ubicación de destino es 'Scrap'
+            if self.picking_type_id.default_location_dest_id.name == 'Scrap':
+                self.use_documents = False
+            else:
+                self.use_documents = self.picking_type_id.code not in ["incoming"]
         else:
             self.use_documents = False
 
