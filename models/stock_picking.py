@@ -380,6 +380,19 @@ class StockPicking(models.Model):
             string="Recepción del Cliente",
             readonly=True,
         )
+    glosa = fields.Char(
+            string="Glosa",
+            size=40,
+            index=True
+        )
+    
+       
+    @api.constrains('glosa')
+    def _check_glosa_length(self):
+        for record in self:
+            if record.glosa and len(record.glosa) > 40:
+                raise exceptions.ValidationError("La glosa no puede exceder los 40 caracteres")
+  
 
     @api.onchange('picking_type_id')
     def onchange_picking_type(self,):

@@ -30,7 +30,9 @@
                 </field>
 
                 <field name="origin" position="after">
-                  <field name="contact_id" />
+                  <field name="contact_id" />                
+                  <field name="glosa"/>
+            </field>
                 </field>
 
                 <xpath expr="//field[@name='move_ids_without_package']/tree//field[@name='product_uom']" position="after">

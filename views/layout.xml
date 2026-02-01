@@ -253,6 +253,15 @@
                         </tbody>
                </table>
 			 </div>
+       
+                    <hr  style="margin-top: -5px;" />
+                    <div class="row" style="margin-top: -5px;">
+                    <div class="col-5" style="font-size: 10px;">
+                                <t t-if="o.glosa">
+                                    <strong>Glosa: </strong>
+                                    <span t-field="o.glosa"/>
+                                </t>
+                    </div>
                <div class="row" style="padding-top:80px;" >
                  <div class="col-5">
                    <div class="col-12">
