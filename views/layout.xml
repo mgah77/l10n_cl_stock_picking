@@ -262,6 +262,7 @@
                                     <span t-field="o.glosa"/>
                                 </t>
                     </div>
+                    </div>
                <div class="row" style="padding-top:80px;" >
                  <div class="col-5">
                    <div class="col-12">
