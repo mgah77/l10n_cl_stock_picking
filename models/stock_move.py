@@ -45,7 +45,7 @@ class StockMove(models.Model):
                 rec._set_price_from()
             if rec.precio_unitario <= 0:
                 rec.precio_unitario = rec.product_id.lst_price
-                rec.move_line_tax_ids = rec.product_id.taxes_id # @TODO mejorar asignación
+            rec.move_line_tax_ids = rec.product_id.taxes_id # @TODO mejorar asignación
             if not rec.name:
                 rec.name = rec.product_id.name
 
