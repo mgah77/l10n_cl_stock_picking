@@ -106,10 +106,10 @@
                         <td style="border-top:0px !important;padding:4px !important;"><strong>Fecha:</strong></td>
                         <td style="border-top:0px !important;padding:4px !important;">
                           <t t-if="o.state == 'done'">
-                              <span t-field="o.date_done"/>
+                              <span t-field="o.date_done" t-options='{"widget": "date"}'/>
                           </t>
                           <t t-if="o.state != 'done'">
-                              <span t-field="o.scheduled_date"/>
+                              <span t-field="o.scheduled_date" t-options='{"widget": "date"}'/>
                           </t>
                         </td>
                       </tr>
@@ -135,7 +135,7 @@
                         <td style="border-top:0px !important;padding:4px !important;"><strong>Contacto:</strong></td>
                         <td style="border-top:0px !important;padding:4px !important;min-width:450px;max-width:450px;"><t t-if="'contact_id' in o and o.contact_id"><span t-field="o.contact_id.name"/></t></td>
                         <td style="border-top:0px !important;padding:4px !important;"><strong>Vencimiento:</strong></td>
-                        <td style="border-top:0px !important;padding:4px !important;"><span t-field="o.scheduled_date"/></td>
+                        <td style="border-top:0px !important;padding:4px !important;"><span t-field="o.date_due"/></td>
                       </tr>
                     </tbody>
                   </table>

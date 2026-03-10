@@ -385,6 +385,41 @@ class StockPicking(models.Model):
             size=40,
             index=True
         )
+
+    date_due = fields.Date(
+        string='Fecha de Vencimiento',
+        compute='_compute_date_due',
+        store=True,
+        readonly=True,
+    )
+
+    @api.depends('scheduled_date', 'date_done', 'move_reason', 'state')
+    def _compute_date_due(self):
+        for rec in self:
+            # Determinar la fecha de emisión real
+            # Si está hecha (done), usamos date_done, si no, scheduled_date
+            if rec.state == 'done' and rec.date_done:
+                fecha_emision = rec.date_done.date()
+            elif rec.scheduled_date:
+                fecha_emision = rec.scheduled_date.date()
+            else:
+                rec.date_due = False
+                continue
+
+            if rec.move_reason == '1':  # Operación constituye venta
+                # Vence el día 10 del mes siguiente
+                month = fecha_emision.month + 1
+                year = fecha_emision.year
+                if month > 12:
+                    month = 1
+                    year += 1
+                rec.date_due = date(year, month, 10)
+            elif rec.move_reason == '5':  # Traslados Internos
+                # Duración de un día: Vence el mismo día de emisión
+                rec.date_due = fecha_emision
+            else:
+                # Para otros casos, por defecto el mismo día
+                rec.date_due = fecha_emision  
     
        
     @api.constrains('glosa')
