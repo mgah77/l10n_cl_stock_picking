@@ -189,8 +189,8 @@
                    </thead>
                    <tbody class="invoice_tbody">
                        <tr style="font-size: 9px !important;" t-foreach="o.move_ids.sorted(key=lambda m: m.product_id.id)" t-as="l">
-                           <td class="table-cell-no-padding">
-                               <span t-field="l.quantity_done"/>
+                           <td class="table-cell-no-padding text-right">
+                               <span t-field="l.quantity_done" t-options='{"widget": "float", "digits": 0}'/>
                                <span t-field="l.product_uom"  groups="product.group_uom"/>
                            </td>
                            <td class="table-cell-no-padding">
@@ -202,13 +202,13 @@
                               </t>
                            </td>
 
-                           <td class="table-cell-no-padding">
+                           <td class="table-cell-no-padding text-right">
                                <span t-field="l.precio_unitario" t-options="{'widget': 'monetary', 'display_currency': o.currency_id, 'digits': 0}"/>
                            </td>
                            <td t-if="display_discount" class="table-cell-no-padding" groups="sale.group_discount_per_so_line">
                                <span t-field="l.discount"/>
                            </td>
-                           <td class="table-cell-no-padding" t-if="'price_untaxed' in l">
+                           <td class="table-cell-no-padding text-right" t-if="'price_untaxed' in l">
                                <span t-field="l.price_untaxed"
                                    t-options="{'widget': 'monetary', 'display_currency': o.currency_id, 'digits': 0}"/>
                            </td>
