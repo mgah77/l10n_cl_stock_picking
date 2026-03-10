@@ -190,7 +190,7 @@
                    <tbody class="invoice_tbody">
                        <tr style="font-size: 9px !important;" t-foreach="o.move_ids.sorted(key=lambda m: m.product_id.id)" t-as="l">
                            <td class="table-cell-no-padding text-right">
-                               <span t-field="l.quantity_done" t-options='{"widget": "float", "digits": 0}'/>
+                               <span t-field="l.quantity_done" t-options="{'widget': 'float', 'digits': 0}"/>
                                <span t-field="l.product_uom"  groups="product.group_uom"/>
                            </td>
                            <td class="table-cell-no-padding">
