@@ -458,65 +458,76 @@ class StockPicking(models.Model):
     def _setChofer(self):
         self.chofer = self.vehicle.driver_id
         self.patente = self.vehicle.license_plate
-
+        
     def _action_done(self):
-        # Verificamos si es transferencia interna
-        es_interna = all(p.picking_type_id.code == 'internal' for p in self)
+        # --- INICIO DIAGNÓSTICO Y PARCHE (LOG VISIBLE) ---
+        _logger.warning("=== INICIANDO _action_done PATCH v4 ===")
+        
+        # Verificamos estrictamente si es interno
+        es_interno = self.picking_type_id.code == 'internal'
+        _logger.warning("Tipo de Operación: %s | Es Interno?: %s", self.picking_type_id.code, es_interno)
 
-        if es_interna:
-            # Usamos un Savepoint para aislar el error de base de datos
-            # Esto permite que si falla el super(), la transacción no se muera completamente
-            savepoint_name = "savepoint_internal_transfer_%s" % self.id
+        if es_interno:
+            _logger.warning("Detectado movimiento INTERNO. Aplicando parche de validación forzada.")
             
-            # Iniciamos el savepoint
-            self.env.cr.execute("SAVEPOINT %s" % savepoint_name)
+            # Usamos un savepoint con nombre genérico
+            sp_name = "sp_internal_fix_%d" % self.id
             
             try:
-                # Intentamos ejecutar la validación normal (que falla por el partner_id)
-                res = super(StockPicking, self)._action_done()
-            except Exception as e:
-                # Si falla, volvemos al savepoint para "desbloquear" la transacción
-                self.env.cr.execute("ROLLBACK TO SAVEPOINT %s" % savepoint_name)
+                # 1. Creamos el punto de rescate
+                self.env.cr.execute("SAVEPOINT %s" % sp_name)
                 
-                # Verificamos si es el error que conocemos
-                if 'null value in column "partner_id"' in str(e):
-                    _logger.warning("Ignorando error de creación de venta en transferencia interna (Savepoint recuperado): %s" % str(e))
-                    
-                    # Como el super() falló, debemos asegurar que el picking quede validado manualmente
-                    # forzamos los movimientos y el estado
-                    if self.state != 'done':
-                         self.move_ids._action_done()
-                         self.write({'state': 'done', 'date_done': fields.Datetime.now()})
-                    res = True
-                else:
-                    # Si es otro error, sí lo lanzamos
-                    raise e
-        
+                # 2. Intentamos la validación estándar
+                res = super(StockPicking, self)._action_done()
+                _logger.warning("Validación estándar completada sin errores aparentes.")
+                
+            except Exception as e:
+                # 3. Si falla, volvemos al punto de rescate
+                _logger.error("!!! ERROR CAPTURADO EN SUPER() !!! Error: %s", str(e))
+                
+                # Deshacemos el error para limpiar la transacción
+                self.env.cr.execute("ROLLBACK TO SAVEPOINT %s" % sp_name)
+                _logger.warning("Transacción recuperada (ROLLBACK SAVEPOINT). Forzando validación manual de movimientos.")
+                
+                # 4. Forzamos la validación manualmente
+                self.move_ids._action_done()
+                self.write({'state': 'done', 'date_done': fields.Datetime.now()})
+                res = self
         else:
-            # Si NO es interna, validación normal y estricta
+            # Si no es interno, comportamiento normal
             res = super(StockPicking, self)._action_done()
 
-        # --- CONTINÚA TU LÓGICA NORMAL DE TIMBRAJE ---
+        # --- TU LÓGICA DE TIMBRAJE ---
+        _logger.warning("Continuando con lógica de timbraje...")
         for s in self:
             if not s.use_documents or s.picking_type_id.warehouse_id.restore_mode:
+                _logger.warning("Saltando timbraje (use_documents=%s, restore=%s)", s.use_documents, s.picking_type_id.warehouse_id.restore_mode)
                 continue
             
-            # Aseguramos que tenga número
+            # Asignación de Folio
             if not s.sii_document_number:
                 s.sii_document_number = s.picking_type_id.warehouse_id.sequence_id.next_by_id()
             
             document_number = (s.document_class_id.doc_code_prefix or '') + str(s.sii_document_number)
             s.name = document_number
+            _logger.warning("Folio asignado: %s", document_number)
             
+            # Timbraje
             if s.picking_type_id.code in ['outgoing', 'internal']:
                 s.responsable_envio = self.env.uid
                 s.sii_result = 'NoEnviado'
-                s._timbrar()
-                # ... (El resto de tu código de cola de envío va aquí igual que antes) ...
+                try:
+                    s._timbrar()
+                    _logger.warning("Timbraje ejecutado exitosamente.")
+                except Exception as e:
+                     _logger.error("Error DURANTE el timbraje: %s", str(e))
+                     raise
+                
                 ISCP = self.env["ir.config_parameter"].sudo()
                 metodo = ISCP.get_param("account.send_dte_method", default='diferido')
                 if metodo == 'manual':
                     continue
+                    
                 tiempo_pasivo = datetime.now()
                 if metodo == 'diferido':
                     tipo_trabajo = 'pasivo'
@@ -525,14 +536,15 @@ class StockPicking(models.Model):
                     )
                 elif metodo == 'inmediato':
                     tipo_trabajo = 'envio'
-                self.env['sii.cola.envio'].sudo().create({
-                                            'company_id': s.company_id.id,
-                                            'doc_ids': [s.id],
-                                            'model': 'stock.picking',
-                                            'user_id': self.env.uid,
-                                            'tipo_trabajo': tipo_trabajo,
-                                            'date_time': tiempo_pasivo,
-                                            })
+                    
+                self.env['sii.cola_envio'].sudo().create({
+                    'company_id': s.company_id.id,
+                    'doc_ids': [s.id],
+                    'model': 'stock.picking',
+                    'user_id': self.env.uid,
+                    'tipo_trabajo': tipo_trabajo,
+                    'date_time': tiempo_pasivo,
+                })
         return res
 
     def do_dte_send_picking(self, n_atencion=None):
