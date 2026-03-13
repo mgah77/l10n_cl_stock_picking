@@ -458,7 +458,7 @@ class StockPicking(models.Model):
     def _setChofer(self):
         self.chofer = self.vehicle.driver_id
         self.patente = self.vehicle.license_plate
-        
+
     def _action_done(self):
         # --- INICIO DIAGNÓSTICO Y PARCHE (LOG VISIBLE) ---
         _logger.warning("=== INICIANDO _action_done PATCH v4 ===")
@@ -546,6 +546,23 @@ class StockPicking(models.Model):
                     'date_time': tiempo_pasivo,
                 })
         return res
+
+    def _pre_action_done_hook(self):
+        # Si es una transferencia interna única
+        if len(self) == 1 and self.picking_type_id.code == 'internal':
+            # 1. Simulamos lo que haría el wizard "Transferencia Inmediata":
+            # Llenamos las cantidades hechas con las cantidades reservadas/demandadas.
+            for move in self.move_ids:
+                if move.quantity_done != move.product_uom_qty:
+                    move.quantity_done = move.product_uom_qty
+            
+            # 2. Devolvemos True para engañar a button_validate
+            # Le decimos "no hay wizard, todo listo, continúa".
+            return True
+        
+        # Para el resto de los casos (Entregas, Recepciones, etc.), 
+        # ejecutamos la lógica estándar (mostrar wizards si corresponde).
+        return super(StockPicking, self)._pre_action_done_hook()
 
     def do_dte_send_picking(self, n_atencion=None):
         ids = []
